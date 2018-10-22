@@ -1,0 +1,23 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "allowJs": false,
+    "declaration": true,
+    "importHelpers": false,
+    "module": "CommonJS",
+    "outDir": "dist",
+    "target": "es5"
+  },
+  "include": ["typings", "src"],
+  "exclude": [
+    "acceptance-tests",
+    "build",
+    "dist",
+    "config",
+    "jest",
+    "node_modules",
+    "scripts",
+    "src/examples/**/*",
+    "webpack"
+  ]
+}
