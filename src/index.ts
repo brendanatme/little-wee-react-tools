@@ -3,10 +3,13 @@
  * 
  * export all modules
  */
-export { IWithIsMobileProps, WithIsMobile } from './hocs/with-is-mobile';
+export {
+  IWithIsMobileProps,
+  WithIsMobile,
+} from './with-is-mobile';
 export {
   IWithEditToggleOptions,
   IWithEditToggleProps,
   IWithEditToggleState,
   WithEditToggle,
-} from './hocs/with-edit-toggle';
+} from './with-edit-toggle';

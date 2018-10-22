@@ -1,27 +1,58 @@
 
-# TS-React-Redux-SCSS
+# React-Tools
 
-A Boilerplate for making simple React apps in Typescript. Contains Redux and SCSS support.
-
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+A collection of re-usable react components and utilities. Available in JS and TypeScript
 
 ## Requirements
 
-- Node.js v10.6+
+- Node.js v10.6+ (tested and working)
 
 ## Installation
 
-- download repo
-- run `npm install`
+- run `npm install --save react-tools`
 
-## Development
+## Usage
 
-- Development server: run `npm start`
-- Production build: run `npm run build`
-- Run tests: run `npm run test`
+### TypeScript
 
-## Production
+#### WithIsMobile
 
-Install `serve` globally: `npm install -g serve`
+```typescript
+import * as React from 'react';
+import { IWithIsMobileProps, WithIsMobile } from 'react-tools';
 
-- Run a production server: `serve -s build`
+interface IMyComponentProps extends IWithIsMobileProps {
+  // ... component props here ...
+}
+
+const MyComponent: React.SFC<IMyComponentProps> = (props: IMyComponentProps) => (
+  <div>{props.isMobile}</div>
+);
+
+export const MyExport = WithIsMobile<IMyComponentProps>(MyComponent);
+```
+
+#### WithEditToggle
+
+```typescript
+import * as React from 'react';
+import { IWithEditToggleProps, WithEditToggle } from 'react-tools';
+
+interface IMyComponentProps extends IWithEditToggleProps {
+  // ... component props here ...
+}
+
+const MyComponent: React.SFC<IMyComponentProps> = (props: IMyComponentProps) => (
+ <div>
+   <p>Is Editing: {props.isEditing}</p>
+   <button onClick={props.startEditing}>Start Editing</button>
+   <button onClick={props.quitEditing}>Quit Editing</button>
+   <button onClick={props.toggleEdit}>Toggle Edit</button>
+ </div>
+);
+
+export const MyExport = WithEditToggle<IMyComponentProps>({
+  clickToEdit: true, // default
+  clickoff: true, // default
+})(MyComponent);
+```
