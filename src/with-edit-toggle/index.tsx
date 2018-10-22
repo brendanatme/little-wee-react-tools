@@ -26,9 +26,7 @@
  */
 import * as React from 'react';
 import * as enhanceWithClickOutside from 'react-click-outside';
-
-type Omit<T, K> = Pick<T, Exclude<keyof T, K>>;
-type Subtract<T, K> = Omit<T, keyof K>;
+import { Subtract } from '../types';
 
 export interface IWithEditToggleOptions {
   clickToEdit: boolean;

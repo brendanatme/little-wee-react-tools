@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './app.scss';
-import { IWithIsMobileProps, WithIsMobile } from '~/hocs/with-is-mobile';
+import { IWithIsMobileProps, WithIsMobile } from '~/with-is-mobile';
 
 class AppClass extends React.Component<IWithIsMobileProps> {
   public render() {

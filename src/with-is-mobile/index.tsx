@@ -18,6 +18,7 @@
  * ```
  */
 import * as React from 'react';
+import { Subtract } from '../types';
 
 export interface IWithIsMobileProps {
   isMobile: boolean;
