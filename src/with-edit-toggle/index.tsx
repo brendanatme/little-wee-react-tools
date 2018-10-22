@@ -47,7 +47,9 @@ export interface IWithEditToggleProps {
 export function WithEditToggle<P extends IWithEditToggleProps>(
   options: IWithEditToggleOptions = { clickToEdit: true, clickoff: true },
 ) {
-  return (Composed: React.ComponentType<P>): React.ComponentType => {
+  return (Composed: React.ComponentType<P>): React.ComponentType<
+    Subtract<P, IWithEditToggleProps>
+  > => {
     class EditToggle extends React.Component<
       Subtract<P, IWithEditToggleProps>,
       IWithEditToggleState

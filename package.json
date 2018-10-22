@@ -1,6 +1,7 @@
 {
-  "name": "little-wee-react-tools",
+  "name": "ts-react-tools",
   "version": "0.4.2",
+  "description": "Generic collection of React components and higher-order-components, in TypeScript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {

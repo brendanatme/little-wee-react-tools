@@ -8,7 +8,7 @@
     "outDir": "dist",
     "target": "es5"
   },
-  "include": ["typings", "src"],
+  "include": ["src"],
   "exclude": [
     "acceptance-tests",
     "build",
