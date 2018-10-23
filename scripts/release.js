@@ -9,7 +9,7 @@ console.log('Running bundle...');
 execSync(`npm run bundle`, err => console.log(err));
 
 console.log(`Bumping version by: ${bump}...`);
-execSync(`cd dist; npm version ${bump}`, err => console.log(err));
+execSync(`npm version ${bump}`, err => console.log(err));
 
 console.log('Copying package.json...');
 execSync(`cp package.json dist/package.json`, err => console.log(err));
