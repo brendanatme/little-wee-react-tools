@@ -1,6 +1,6 @@
 {
   "name": "ts-react-tools",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "Generic collection of React components and higher-order-components, in TypeScript",
   "main": "index.js",
   "types": "index.d.ts",
@@ -12,7 +12,6 @@
     "test": "node scripts/test.js --env=jsdom"
   },
   "dependencies": {
-    "dist": "11.0.0",
     "dotenv": "4.0.0",
     "dotenv-expand": "4.2.0",
     "object-assign": "4.1.1",
