@@ -2,8 +2,8 @@
   "name": "ts-react-tools",
   "version": "0.4.4",
   "description": "Generic collection of React components and higher-order-components, in TypeScript",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "build": "node scripts/build.js",
     "bundle": "tsc -p tsconfig.bundle.json",
