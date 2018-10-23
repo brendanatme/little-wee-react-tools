@@ -21,15 +21,19 @@ A collection of re-usable react components and utilities. Available in JS and Ty
 import * as React from 'react';
 import { IWithIsMobileProps, WithIsMobile } from 'ts-react-tools';
 
-interface IMyComponentProps extends IWithIsMobileProps {
+export interface IMyComponentProps {
   // ... component props here ...
 }
 
-const MyComponent: React.SFC<IMyComponentProps> = (props: IMyComponentProps) => (
+interface IInternalMyComponentProps extends IWithIsMobileProps {
+  // ... component props here ...
+}
+
+const MyComponent: React.SFC<IInternalMyComponentProps> = (props: IInternalMyComponentProps) => (
   <div>{props.isMobile}</div>
 );
 
-export const MyExport = WithIsMobile<IMyComponentProps>(MyComponent);
+export const MyExport = WithIsMobile<IInternalMyComponentProps>(MyComponent);
 ```
 
 #### WithEditToggle
@@ -38,11 +42,15 @@ export const MyExport = WithIsMobile<IMyComponentProps>(MyComponent);
 import * as React from 'react';
 import { IWithEditToggleProps, WithEditToggle } from 'ts-react-tools';
 
-interface IMyComponentProps extends IWithEditToggleProps {
+export interface IMyComponentProps {
   // ... component props here ...
 }
 
-const MyComponent: React.SFC<IMyComponentProps> = (props: IMyComponentProps) => (
+interface IInternalMyComponentProps extends IWithIsMobileProps {
+  // ... component props here ...
+}
+
+const MyComponent: React.SFC<IInternalMyComponentProps> = (props: IInternalMyComponentProps) => (
  <div>
    <p>Is Editing: {props.isEditing}</p>
    <button onClick={props.startEditing}>Start Editing</button>
@@ -51,7 +59,7 @@ const MyComponent: React.SFC<IMyComponentProps> = (props: IMyComponentProps) => 
  </div>
 );
 
-export const MyExport = WithEditToggle<IMyComponentProps>({
+export const MyExport = WithEditToggle<IInternalMyComponentProps>({
   clickToEdit: true, // default
   clickoff: true, // default
 })(MyComponent);

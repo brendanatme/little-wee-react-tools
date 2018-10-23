@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './app.scss';
-import { IWithIsMobileProps, WithIsMobile } from 'dist/with-is-mobile';
+import { IWithIsMobileProps, WithIsMobile } from '~/with-is-mobile';
 import { EditToggle } from '../edit-toggle';
 
 class AppClass extends React.Component<IWithIsMobileProps> {

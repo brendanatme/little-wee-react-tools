@@ -29,8 +29,8 @@ import * as enhanceWithClickOutside from 'react-click-outside';
 import { Subtract } from '../types';
 
 export interface IWithEditToggleOptions {
-  clickToEdit: boolean;
-  clickoff: boolean;
+  clickToEdit?: boolean;
+  clickoff?: boolean;
 }
 
 export interface IWithEditToggleState {
@@ -45,8 +45,16 @@ export interface IWithEditToggleProps {
 }
 
 export function WithEditToggle<P extends IWithEditToggleProps>(
-  options: IWithEditToggleOptions = { clickToEdit: true, clickoff: true },
+  options: IWithEditToggleOptions = {},
 ) {
+  options.clickToEdit = options.clickToEdit !== undefined
+    ? options.clickToEdit
+    : true;
+
+  options.clickoff = options.clickoff !== undefined
+    ? options.clickoff
+    : true;
+
   return (Composed: React.ComponentType<P>): React.ComponentType<
     Subtract<P, IWithEditToggleProps>
   > => {

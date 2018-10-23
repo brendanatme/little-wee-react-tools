@@ -2,7 +2,7 @@
  * edit-toggle.component
  */
 import * as React from 'react';
-import { IWithEditToggleProps, WithEditToggle } from 'dist/with-edit-toggle';
+import { IWithEditToggleProps, WithEditToggle } from '~/with-edit-toggle';
 import './edit-toggle.component.scss';
 
 export interface IEditToggleProps {
