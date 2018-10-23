@@ -12,6 +12,7 @@
     "test": "node scripts/test.js --env=jsdom"
   },
   "dependencies": {
+    "dist": "11.0.0",
     "dotenv": "4.0.0",
     "dotenv-expand": "4.2.0",
     "object-assign": "4.1.1",

@@ -50,7 +50,7 @@
     ],
     "ordered-imports": [true, {
       "import-sources-order": "any",
-      "named-imports-order": "case-insensitive"
+      "named-imports-order": false
     }],
     "quotemark": [true, "single", "jsx-double"],
     "radix": true,

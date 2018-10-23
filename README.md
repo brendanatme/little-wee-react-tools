@@ -1,5 +1,5 @@
 
-# React-Tools
+# Ts-React-Tools
 
 A collection of re-usable react components and utilities. Available in JS and TypeScript
 
@@ -9,7 +9,7 @@ A collection of re-usable react components and utilities. Available in JS and Ty
 
 ## Installation
 
-- run `npm install --save react-tools`
+- run `npm install --save ts-react-tools`
 
 ## Usage
 
@@ -19,7 +19,7 @@ A collection of re-usable react components and utilities. Available in JS and Ty
 
 ```typescript
 import * as React from 'react';
-import { IWithIsMobileProps, WithIsMobile } from 'react-tools';
+import { IWithIsMobileProps, WithIsMobile } from 'ts-react-tools';
 
 interface IMyComponentProps extends IWithIsMobileProps {
   // ... component props here ...
@@ -36,7 +36,7 @@ export const MyExport = WithIsMobile<IMyComponentProps>(MyComponent);
 
 ```typescript
 import * as React from 'react';
-import { IWithEditToggleProps, WithEditToggle } from 'react-tools';
+import { IWithEditToggleProps, WithEditToggle } from 'ts-react-tools';
 
 interface IMyComponentProps extends IWithEditToggleProps {
   // ... component props here ...
